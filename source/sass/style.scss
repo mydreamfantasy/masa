@@ -3,17 +3,18 @@
 
 @import "vendor/normalize";
 // Swiper 8.4.7
-// @import "vendor/swiper";
-
+@import "vendor/swiper";
+@import "vendor/data-accordion";
+@import "vendor/auto-resize-textarea";
 // Global
 // ---------------------------------
-
 @import "variables";
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/wrapper";
 
 // Blocks
 // ---------------------------------
@@ -23,8 +24,20 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-
-// ---------------------------------
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/programms";
+@import "blocks/how-to-go";
+@import "blocks/news";
+@import "blocks/questions";
+@import "blocks/accordion";
+@import "blocks/reviews";
+@import "blocks/contacts";
+@import "blocks/map";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/feedback"; // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
 

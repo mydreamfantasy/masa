@@ -1,13 +1,15 @@
 .custom-select {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 
-  width: 300px;
-  padding: 14px 0 28px;
-  margin: 0 0 44px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
+  @include vp-1199 {
+    row-gap: 11px;
+    margin-bottom: 0;
   }
 
   &__label {
@@ -17,7 +19,7 @@
 
     transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity  0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
     pointer-events: none;
 
@@ -64,27 +66,21 @@
     align-items: center;
     width: 100%;
     height: 48px;
-    padding: 5px 10px;
-
+    margin-bottom: 9px;
+    padding: 5px 20px 5px 10px;
     background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(#ffffff, 0.2);
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-
     transition: border 0.3s ease;
 
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
+    @include vp-1199 {
+      margin-bottom: 5px;
     }
 
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
+    @include vp-767 {
+      margin: 1px;
     }
   }
 
@@ -117,38 +113,14 @@
     cursor: pointer;
 
     transition: background-color 0.3s ease;
-
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
   }
 
   &__error {
     position: absolute;
     bottom: -15px;
     left: 0;
-
-    color: #ff1553;
+    background-color: rgba(255, 94, 102, 0.2);
+    border: 1px solid $color-watermelon;
 
     opacity: 0;
 
@@ -177,11 +149,11 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+    width: 14px;
+    height: 8px;
     margin-left: auto;
 
-    background-color: #000000;
+    background-color: #ffffff;
 
     transition: transform 0.3s ease;
 
@@ -239,11 +211,14 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      background-color: rgba(255, 94, 102, 0.2);
+      border: 1px solid $color-watermelon;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        background-color: rgba(255, 94, 102, 0.2);
+        border: 1px solid $color-watermelon;
+        outline: none;
       }
     }
   }
@@ -298,5 +273,19 @@
     &.is-valid {
       color: #15ab07;
     }
+  }
+}
+
+.custom-select p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  opacity: 0.8;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
