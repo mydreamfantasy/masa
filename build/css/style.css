@@ -1575,7 +1575,8 @@ button,
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .wrapper:has(.header__nav--opened)::before {
@@ -2886,7 +2887,7 @@ button,
   width: 100%;
 }
 
-.about__features-text h4 h4 {
+.about__features-text h4 {
   font-size: 26px;
   font-weight: 400;
   line-height: 30px;
@@ -2896,7 +2897,7 @@ button,
   max-width: 144px;
 }
 
-.about__features-text h4 p {
+.about__features-text p {
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
@@ -5159,10 +5160,6 @@ button,
 }
 
 @media (max-width: 1439px) {
-  .container {
-    padding: 0 60px;
-  }
-
   .btn--light {
     gap: 0;
   }
@@ -5359,7 +5356,7 @@ button,
     row-gap: 7px;
   }
 
-  .about__features-text h4 h4 {
+  .about__features-text h4 {
     font-size: 20px;
     line-height: 22px;
   }
@@ -5960,13 +5957,15 @@ button,
 
 @media (max-width: 1023px) {
   .container {
-    padding: 0 45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .btn {
@@ -6268,13 +6267,13 @@ button,
     row-gap: 3px;
   }
 
-  .about__features-text h4 h4 {
+  .about__features-text h4 {
     font-size: 16px;
     line-height: 20px;
     white-space: nowrap;
   }
 
-  .about__features-text h4 p {
+  .about__features-text p {
     font-size: 14px;
     line-height: 20px;
   }
