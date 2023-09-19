@@ -4027,17 +4027,8 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
-  -webkit-column-gap: 10.9%;
-  -moz-column-gap: 10.9%;
-  column-gap: 10.9%;
-  width: 229px;
-}
-
-.reviews-slider__personal-program-date--second {
-  width: 211px;
-  -webkit-column-gap: 12.5%;
-  -moz-column-gap: 12.5%;
-  column-gap: 12.5%;
+  gap: 25px;
+  width: 230px;
 }
 
 .reviews-slider__personal-program-date-wrapper {
@@ -4689,7 +4680,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
-  width: 58.6%;
+  width: 60.5%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -5175,6 +5166,11 @@ button,
 
   .news__slider:first-child {
     width: 50%;
+  }
+
+  .reviews-slider__personal-program-date {
+    width: 205px;
+    gap: 5%;
   }
 }
 
@@ -5752,6 +5748,11 @@ button,
     font-size: 20px;
   }
 
+  .reviews-slider__personal-program-date {
+    width: 230px;
+    gap: 12%;
+  }
+
   .reviews-slider__personal-program-date-wrapper p {
     line-height: 20px;
   }
@@ -5880,7 +5881,7 @@ button,
     -ms-flex-pack: end;
     justify-content: end;
     margin-left: auto;
-    width: 79.6%;
+    width: 79.5%;
     gap: 15px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -6688,22 +6689,10 @@ button,
 
   .reviews-slider__personal-program-date {
     width: 100%;
-    -webkit-column-gap: 25px;
-    -moz-column-gap: 25px;
-    column-gap: 25px;
+    gap: 25px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
-  }
-
-  .reviews-slider__personal-program-date--second {
-    width: 100%;
-    -webkit-column-gap: unset;
-    -moz-column-gap: unset;
-    column-gap: unset;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
   }
 
   .reviews-slider__personal-program-date-wrapper {
