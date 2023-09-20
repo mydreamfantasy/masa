@@ -3124,6 +3124,7 @@ button,
   background-color: #ffffff;
   color: #316dc2;
   letter-spacing: -0.5px;
+  word-break: break-word;
 }
 
 .programms__slider__wrapper h3::after {

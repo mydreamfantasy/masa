@@ -250,6 +250,7 @@
   background-color: $color-default-white;
   color: $color-cerulean;
   letter-spacing: -0.5px;
+  word-break: break-word;
 
   @include vp-1439 {
     width: 63%;
