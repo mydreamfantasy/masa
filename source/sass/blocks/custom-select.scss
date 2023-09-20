@@ -12,6 +12,10 @@
     margin-bottom: 0;
   }
 
+  @include vp-767 {
+    row-gap: 0;
+  }
+
   &__label {
     position: absolute;
     top: 50%;

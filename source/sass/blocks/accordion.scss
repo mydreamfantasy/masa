@@ -83,10 +83,9 @@
   letter-spacing: -0.9px;
 
   @include vp-1199 {
-    max-width: 500px;
+    width: 77%;
     font-size: 22px;
     line-height: 26px;
-    width: 80%;
     letter-spacing: -0.7px;
   }
 
@@ -206,13 +205,14 @@
 .accordion__content p {
   margin: 0;
   margin-top: 10px;
-  width: 100%;
+  width: 67%;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.5px;
 
   @include vp-1199 {
+    width: 100%;
     line-height: 20px;
     margin-top: 9px;
     letter-spacing: -0.5px;
