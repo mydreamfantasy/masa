@@ -1,16 +1,16 @@
-import Swiper from '../vendor/swiper';
-const swiperContainer = document.querySelectorAll('[data-swiper]');
+import Swiper from "../vendor/swiper";
+const swiperContainer = document.querySelectorAll("[data-swiper]");
 
 export const getSwiperHero = () => {
   if (!swiperContainer) {
     return;
   } else {
-    const swiper = new Swiper('.hero', {
+    const swiper = new Swiper(".hero", {
       speed: 1500,
       loop: true,
       pagination: {
-        el: '.hero__pagination',
-        type: 'bullets',
+        el: ".hero__pagination",
+        type: "bullets",
         clickable: true,
       },
       breakpoints: {
@@ -34,7 +34,7 @@ export const getSwiperProgramms = () => {
   if (!swiperContainer) {
     return;
   } else {
-    const swiper = new Swiper('.programms__swiper ', {
+    const swiper = new Swiper(".programms__swiper ", {
       speed: 1500,
       loop: false,
       breakpoints: {
@@ -48,7 +48,7 @@ export const getSwiperProgramms = () => {
           allowTouchMove: true,
 
           scrollbar: {
-            dragSize: '330',
+            dragSize: "330",
           },
         },
         1200: {
@@ -57,16 +57,16 @@ export const getSwiperProgramms = () => {
           allowTouchMove: false,
 
           scrollbar: {
-            dragSize: '400',
+            dragSize: "400",
           },
         },
       },
       scrollbar: {
-        el: '.programms__scrollbar',
+        el: ".programms__scrollbar",
       },
       navigation: {
-        nextEl: '.programms__button-next',
-        prevEl: '.programms__button-prev',
+        nextEl: ".programms__button-next",
+        prevEl: ".programms__button-prev",
       },
     });
 
@@ -78,10 +78,10 @@ export const getSwiperNews = () => {
   if (!swiperContainer) {
     return;
   } else {
-    const swiper = new Swiper('.news__swiper', {
+    const swiper = new Swiper(".news__swiper", {
       speed: 1500,
       loop: false,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: 32,
       allowTouchMove: false,
       breakpoints: {
@@ -90,7 +90,7 @@ export const getSwiperNews = () => {
           spaceBetween: 20,
           grid: {
             rows: 2,
-            fill: 'row',
+            fill: "row",
           },
           allowTouchMove: true,
         },
@@ -98,19 +98,19 @@ export const getSwiperNews = () => {
           slidesPerView: 2,
           grid: {
             rows: 2,
-            fill: 'row',
+            fill: "row",
           },
           spaceBetween: 30,
           allowTouchMove: true,
         },
         1200: {
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           spaceBetween: 32,
           allowTouchMove: false,
         },
       },
       pagination: {
-        el: '.news__pagination',
+        el: ".news__pagination",
         clickable: true,
         /* eslint-disable */
         renderBullet: function (index, className) {
@@ -119,8 +119,8 @@ export const getSwiperNews = () => {
       },
       /* eslint-enable */
       navigation: {
-        nextEl: '.news__button-next',
-        prevEl: '.news__button-prev',
+        nextEl: ".news__button-next",
+        prevEl: ".news__button-prev",
       },
     });
     swiper.init();
@@ -131,7 +131,7 @@ export const getSwiperReviews = () => {
   if (!swiperContainer) {
     return;
   } else {
-    const swiper = new Swiper('.reviews__swiper', {
+    const swiper = new Swiper(".reviews__swiper", {
       speed: 1500,
       loop: false,
       breakpoints: {
@@ -146,7 +146,7 @@ export const getSwiperReviews = () => {
           allowTouchMove: true,
 
           scrollbar: {
-            dragSize: '330',
+            dragSize: "330",
           },
         },
         1200: {
@@ -155,16 +155,16 @@ export const getSwiperReviews = () => {
           allowTouchMove: false,
 
           scrollbar: {
-            dragSize: '400',
+            dragSize: "400",
           },
         },
       },
       scrollbar: {
-        el: '.reviews__scrollbar',
+        el: ".reviews__scrollbar",
       },
       navigation: {
-        nextEl: '.reviews__button-next',
-        prevEl: '.reviews__button-prev',
+        nextEl: ".reviews__button-next",
+        prevEl: ".reviews__button-prev",
       },
     });
     swiper.init();

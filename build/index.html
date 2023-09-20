@@ -8,9 +8,9 @@
   <link rel="apple-touch-icon" href="img/favicon/apple.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Образовательная программа">
-  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" />
-  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" />
-  <link rel="preload" href="fonts/rouble.woff2" as="font" />
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" crossOrigin="anonymous" />
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" crossOrigin="anonymous" />
+  <link rel="preload" href="fonts/rouble.woff2" as="font" crossOrigin="anonymous" />
   <title>Maca</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -44,8 +44,8 @@
               <a href="#">O проекте</a>
             </li>
             <li
-              class="header__nav__item header__nav__item--programms header__nav__item--button header__nav__item--button-close header__nav--nojs">
-              <button class="header__nav__item-programms-button" href="#">
+              class="header__nav__item header__nav__item--programms header__nav__item--button header__nav__item--button-close header__nav__item--nojs">
+              <button class="header__nav__item-programms-button">
                 <span>Программы</span>
               </button>
               <ul class="header__nav__dropdown-programms-list">
@@ -71,8 +71,8 @@
             </li>
 
             <li
-              class="header__nav__item header__nav__item--news header__nav__item--button header__nav__item--button-close header__nav--nojs">
-              <button class="header__nav__item-news-button" href="#">
+              class="header__nav__item header__nav__item--news header__nav__item--button header__nav__item--button-close header__nav__item--nojs">
+              <button class="header__nav__item-news-button">
                 <span>Новости</span>
               </button>
               <ul class="header__nav__dropdown-news-list">
@@ -880,7 +880,7 @@
         </div>
       </section>
 
-      <section class="main__contacts contacts" id="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__container container">
           <h2>Контакты</h2>
           <ul class="contacts__list">
@@ -903,7 +903,7 @@
         </div>
       </section>
 
-      <section class="main__user-contact form">
+      <section class="form">
         <div class="form__container container">
           <div class="form__content">
             <div class="form__wrapper" data-form-validate data-callback="base">
@@ -1041,7 +1041,7 @@
           </li>
         </ul>
         <div class="footer__policy">
-          <p href="#">Masa © 2023 Все права защищены</p>
+          <p>Masa © 2023 Все права защищены</p>
           <a href="#">Политика конфиденциальности</a>
         </div>
       </div>
@@ -1066,16 +1066,16 @@
             <div class="feedback__inner-wrapper">
               <div class="custom-input feedback__input" data-validate-type="text" data-limitation="name"
                 data-required="data-required">
-                <input type="text" name="user-name-1" placeholder="" id="name-second-from"
+                <input type="text" name="user-name-1" placeholder="" id="name-second-from-modal"
                   aria-label="Введите ваше имя.">
-                <label for="name-second-from">Имя</label>
+                <label for="name-second-from-modal">Имя</label>
               </div>
 
               <div class="custom-input feedback__input feedback__input--phone" data-validate-type="phone"
                 data-on-input-validate="data-on-input-validate" data-required="data-required" data-phone-length="18">
-                <input type="tel" name="user-phone" placeholder="" id="mobile-number-second-from"
+                <input type="tel" name="user-phone" placeholder="" id="mobile-number-second-from-modal"
                   aria-label="Введите ваш телефон.">
-                <label for="mobile-number-second-from">Телефон</label>
+                <label for="mobile-number-second-from-modal">Телефон</label>
               </div>
 
               <div class="custom-select feedback__select" data-select data-validate-type="select" data-name="some-name"
@@ -1125,4 +1125,5 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 </body>
+
 </html>

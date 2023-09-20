@@ -185,7 +185,6 @@
 
 .programms__slider {
   position: relative;
-  max-width: 392px;
   height: auto;
   border-radius: 12px;
 
@@ -197,6 +196,7 @@
 .programms__slider img {
   border-radius: 12px;
   object-fit: cover;
+  width: 100%;
 
   @include vp-1199 {
     width: 100%;
