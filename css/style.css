@@ -2049,7 +2049,7 @@ button,
   background-color: #ffffff;
 }
 
-.custom-toggle.is-invalid label span {
+.custom-toggle.is-invalid span {
   color: #ff5e66;
 }
 
@@ -3050,7 +3050,6 @@ button,
 
 .programms__slider {
   position: relative;
-  max-width: 392px;
   height: auto;
   border-radius: 12px;
 }
@@ -3059,6 +3058,7 @@ button,
   border-radius: 12px;
   -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
 }
 
 .programms__slider__wrapper {
@@ -3437,14 +3437,12 @@ button,
   position: relative;
   border-radius: 12px;
   height: auto;
-  width: 24.4%;
-  max-width: 286px;
+  width: 23%;
   overflow: hidden;
 }
 
 .news__slider:first-child {
   width: 48.8%;
-  max-width: 100%;
 }
 
 .news__slider img {
@@ -3452,6 +3450,7 @@ button,
   object-fit: cover;
   border-radius: 12px;
   height: 100%;
+  width: 100%;
 }
 
 .news__slider__content {
@@ -3555,7 +3554,7 @@ button,
 .news__slider:first-child h3 {
   position: relative;
   margin-top: -1px;
-  padding: 15px 12px 6px 0;
+  padding: 15px 12px 3px 0;
   width: 70%;
   letter-spacing: -0.6px;
 }
@@ -3584,7 +3583,7 @@ button,
   justify-content: space-between;
   margin: -1px 0 0 0;
   border-radius: 0 12px;
-  padding: 8px 18px 14px 0;
+  padding: 8px 18px 11px 0;
   background-color: #f0efe9;
 }
 
@@ -3671,8 +3670,8 @@ button,
 
 .questions__accordion {
   margin: 0 auto;
-  width: 84%;
-  max-width: 1028px;
+  width: 83%;
+  max-width: 1920px;
 }
 
 .accordion {
@@ -3819,7 +3818,7 @@ button,
 
 .accordion__content {
   width: 100%;
-  max-width: 725px;
+  max-width: 1300px;
   padding: 0 40px 0 40px;
 }
 
@@ -3877,7 +3876,6 @@ button,
 
 .reviews__slider {
   width: 40%;
-  max-width: 604px;
   margin: 0;
   border: 1px solid #316dc2;
   border-radius: 16px;
@@ -4225,7 +4223,7 @@ button,
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
-  max-width: 1440px;
+  max-width: 1920px;
   color: #ffffff;
   padding-top: 120px;
   padding-bottom: 57px;
@@ -5150,6 +5148,12 @@ button,
   }
 }
 
+@media (min-width: 1900px) {
+  .questions__accordion {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1439px) {
   .btn--light {
     gap: 0;
@@ -5599,10 +5603,6 @@ button,
     -webkit-box-ordinal-group: 6;
     -ms-flex-order: 5;
     order: 5;
-  }
-
-  .news__slider img {
-    width: 100%;
   }
 
   .news__slider__content {
@@ -6974,8 +6974,7 @@ button,
   }
 
   .feedback__select p {
-    margin: 0;
-    margin-bottom: 8px;
+    margin: 0 0 8px;
   }
 
   .feedback__button-select {
