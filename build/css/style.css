@@ -6021,6 +6021,7 @@ button,
   .form__select p {
     line-height: 20px;
     letter-spacing: -0.5px;
+    margin-bottom: -6px;
   }
 
   .form__button-select {
