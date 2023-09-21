@@ -4580,6 +4580,16 @@ button,
   position: relative;
 }
 
+.form__select p {
+  width: 100%;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #f0efe9;
+  opacity: 0.9;
+}
+
 .form__select-list {
   position: absolute;
   left: 0;
@@ -5996,7 +6006,7 @@ button,
   }
 
   .form__inner-wrapper {
-    row-gap: 16px;
+    row-gap: 15px;
   }
 
   .form__textarea {
@@ -6004,7 +6014,13 @@ button,
   }
 
   .form__checkbox {
+    margin-top: 5px;
     margin-bottom: 29px;
+  }
+
+  .form__select p {
+    line-height: 20px;
+    letter-spacing: -0.5px;
   }
 
   .form__button-select {
@@ -6977,11 +6993,18 @@ button,
   }
 
   .form__checkbox {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
+    margin-top: 2px;
   }
 
   .form__checkbox label {
     padding-left: 30px;
+  }
+
+  .form__select p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px;
   }
 
   .form__button-select {
