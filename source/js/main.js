@@ -1,25 +1,26 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import { iosVhFix } from "./utils/ios-vh-fix";
+import { initModals } from "./modules/modals/init-modals";
+import { Form } from "./modules/form-validate/form";
 
 import {
   getSwiperHero,
   getSwiperProgramms,
   getSwiperNews,
-  getSwiperReviews
-} from './modules/slider';
+  getSwiperReviews,
+} from "./modules/slider";
 import {
   openMenu,
   openDropMenuProgramm,
-  openDropMenuNews
-} from './modules/open-menu';
-import {initAccordions} from './modules/accordion/init-accordion';
-import {CustomSelect} from './modules/select/custom-select';
-import {initMap} from './modules/map';
+  openDropMenuNews,
+} from "./modules/open-menu";
+import { initAccordions } from "./modules/accordion/init-accordion";
+import { CustomSelect } from "./modules/select/custom-select";
+import { initMap } from "./modules/map";
+import { replaceActiveClass } from "./modules/news-fiters";
 
 // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   // Utils
   // ---------------------------------
   iosVhFix();
@@ -32,13 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
   openDropMenuNews();
   initAccordions();
   initMap();
+  replaceActiveClass();
 
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     initModals();
 
     const select = new CustomSelect();

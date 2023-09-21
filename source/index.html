@@ -33,10 +33,11 @@
         </div>
 
         <nav class="header__nav header__nav--closed header__nav--nojs">
-          <button class="header__nav__btn btn" type="button">
+          <button class="header__nav__btn btn btn--menu" type="button">
             <span>Меню</span>
-            <span></span>
+            <span class="btn-menu"></span>
             <span class="visually-hidden">Открывает и закрывает меню</span>
+          </button>
           </button>
 
           <ul class="header__nav__list">
@@ -496,13 +497,14 @@
       <section class="news" id="news">
         <div class="news__container">
           <h2>Новости и материалы</h2>
-          <ul class="news__filtration-list">
-            <li class="news__filtration-item news__filtration-item--current">Общее</li>
-            <li class="news__filtration-item">Волонтерство</li>
-            <li class="news__filtration-item">Стажировки</li>
-            <li class="news__filtration-item">Карьера</li>
-            <li class="news__filtration-item">Путешествия</li>
-          </ul>
+
+          <div class="news__filtration-list">
+            <button class="news__filtration-item news__filtration-item--current">Общее</button>
+            <button class="news__filtration-item">Волонтерство</button>
+            <button class="news__filtration-item">Стажировки</button>
+            <button class="news__filtration-item">Карьера</button>
+            <button class="news__filtration-item">Путешествия</button>
+          </div>
           <div class="container">
             <div class="news__swiper">
               <div class="news__swiper-wrapper swiper-wrapper">
@@ -941,7 +943,7 @@
                       aria-label="Введите ваш телефон.">
                   </div>
 
-                  <div class="auto-resize-textarea form__textarea">
+                  <div class="auto-resize-textarea form__textarea" data-validate-type="text" data-required>
                     <label for="message">Ваше сообщение</label>
                     <textarea name="example" rows="2" aria-label="textarea" class="is-initialized"
                       style="overflow: hidden; resize: none; height: 98px;" id="message"></textarea>

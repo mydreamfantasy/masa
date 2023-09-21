@@ -20,4 +20,17 @@
       border-color: #2c39f2;
     }
   }
+
+  &.is-invalid {
+    textarea {
+      background-color: rgba(255, 94, 102, 0.2);
+      border: 1px solid #ff5e66;
+
+      &:focus,
+      &:hover {
+        background-color: rgba(255, 94, 102, 0.2);
+        border: 1px solid #ff5e66;
+      }
+    }
+  }
 }

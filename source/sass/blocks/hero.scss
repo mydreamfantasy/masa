@@ -66,29 +66,21 @@
 }
 
 .hero__item__wrapper {
-  padding: 410px 100px 5px 100px;
+  padding: 0 100px 5px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   max-width: 1440px;
   margin: 0 auto;
   height: 100%;
 
   @include vp-1199 {
-    padding: 678px 45px 36px 45px;
+    padding: 0 45px 61px 45px;
   }
 
   @include vp-767 {
-    padding: 232px 15px 20px 15px;
-  }
-}
-
-.hero__item__wrapper--third {
-  padding-top: 410px;
-
-  @include vp-1199 {
-    padding-top: 678px;
-  }
-
-  @include vp-767 {
-    padding-top: 232px;
+    padding: 100px 15px 20px 15px;
+    margin-top: 0;
   }
 }
 
@@ -144,12 +136,13 @@
   }
 }
 
-.hero__item__btn span:nth-child(1n) {
+.hero__item__btn span:first-child {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 12px;
   letter-spacing: 0.9px;
+  width: 91px;
 
   @include vp-1199 {
     font-size: 14px;
@@ -363,12 +356,14 @@
   @include vp-1199 {
     position: relative;
     bottom: 0;
+    top: 0;
     right: 0;
     left: -6.4%;
   }
 
   @include vp-767 {
     left: -11%;
+    top: 0;
     gap: 4px;
   }
 }
