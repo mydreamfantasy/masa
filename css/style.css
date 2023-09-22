@@ -6123,6 +6123,11 @@ button,
   .feedback__input {
     margin-bottom: 20px;
   }
+
+  .feedback__select {
+    row-gap: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 1023px) {
