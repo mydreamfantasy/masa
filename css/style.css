@@ -2028,18 +2028,6 @@ button,
   border: 1px solid #ff5e66;
 }
 
-.custom-input.is-valid input,
-.custom-input.is-valid textarea {
-  border: 2px solid #22b259;
-}
-
-.custom-input.is-valid input:focus,
-.custom-input.is-valid input:hover,
-.custom-input.is-valid textarea:focus,
-.custom-input.is-valid textarea:hover {
-  border: 2px solid rgba(34, 178, 89, 0.5);
-}
-
 .custom-input .input-message {
   position: absolute;
   right: 0;
@@ -2048,10 +2036,6 @@ button,
 
 .custom-input .input-message.is-invalid {
   color: #ff0000;
-}
-
-.custom-input .input-message.is-valid {
-  color: #15ab07;
 }
 
 .custom-toggle {
@@ -2160,16 +2144,6 @@ button,
   width: 100%;
   padding: 0;
   margin: 0;
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 }
 
 .custom-select__label {
@@ -2405,10 +2379,6 @@ button,
   color: #ff0000;
 }
 
-.custom-select .input-message.is-valid {
-  color: #15ab07;
-}
-
 .custom-select p {
   margin: 0;
   padding: 0;
@@ -2416,6 +2386,12 @@ button,
   font-weight: 400;
   line-height: 14px;
   opacity: 0.8;
+}
+
+.custom-select__item[aria-selected=true],
+.custom-select__item[aria-selected=true]:hover {
+  background-color: rgb(49, 109, 194);
+  color: rgb(255, 255, 255);
 }
 
 .header {
@@ -2687,6 +2663,18 @@ button,
   min-height: 800px;
   height: auto;
   background-color: #a9afb7;
+  position: relative;
+}
+
+.hero__item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 109, 194, 0.2);
+  z-index: 1;
 }
 
 .hero__item img {
@@ -2694,6 +2682,7 @@ button,
   content: "";
   width: 100%;
   height: 100%;
+  min-height: 800px;
   left: 0;
   top: 0;
   z-index: -1;
@@ -2703,11 +2692,16 @@ button,
 
 .hero__overlay {
   background: rgba(49, 109, 194, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
 }
 
 .hero__item__wrapper {
-  padding: 0 100px 5px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2715,12 +2709,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  height: 100%;
+  z-index: 3;
+  padding: 410px 100px 61px 100px;
 }
 
 .hero__item__btn {
@@ -2921,14 +2916,20 @@ button,
 }
 
 .about__btn {
+  min-width: 277px;
   width: 56%;
   padding-left: 30px;
   margin-bottom: 10px;
 }
 
+.about__btn span:first-child {
+  width: 174px;
+}
+
 .about__btn span:nth-child(2n) {
   height: 46px;
   width: 46px;
+  max-width: 46px;
 }
 
 .about__features-list {
@@ -3070,6 +3071,12 @@ button,
 .programms__btn span:nth-child(2n) {
   width: 46px;
   height: 46px;
+}
+
+.programms__btn span:nth-child(1n) {
+  max-width: 135px;
+  word-wrap: break-word;
+  white-space: break-spaces;
 }
 
 .programms__wrapper {
@@ -4483,10 +4490,17 @@ button,
 }
 
 .form__textarea textarea {
+  width: 100%;
+  outline: none;
   padding: 16px 25px;
+  min-height: 98px;
   color: #ffffff;
   font-size: 16px;
   opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  overflow: auto;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
@@ -4624,10 +4638,6 @@ button,
   color: #ffffff;
   background-color: #316dc2;
   outline: none;
-}
-
-.form__item[aria-selected=true] {
-  background-color: #ffffff;
 }
 
 .form__button-select {
@@ -5075,10 +5085,6 @@ button,
   outline: none;
 }
 
-.custom-select__item[aria-selected=true] {
-  background-color: #ffffff;
-}
-
 .feedback__input--phone {
   margin-bottom: 15px;
 }
@@ -5366,7 +5372,7 @@ button,
   }
 
   .hero__item__wrapper {
-    padding: 0 45px 61px 45px;
+    padding: 695px 45px 61px 45px;
   }
 
   .hero__item__btn {
@@ -5468,6 +5474,7 @@ button,
   }
 
   .about__btn {
+    min-width: unset;
     width: 54.5%;
   }
 
@@ -6221,8 +6228,7 @@ button,
   }
 
   .hero__item__wrapper {
-    padding: 100px 15px 20px 15px;
-    margin-top: 0;
+    padding: 259px 15px 18px 15px;
   }
 
   .hero__item__btn {
@@ -6389,8 +6395,14 @@ button,
     flex-shrink: 1;
   }
 
+  .about__btn span:first-child {
+    font-size: 12px;
+    line-height: 10px;
+  }
+
   .about__btn span:nth-child(2n) {
     width: 34px;
+    max-width: 34px;
     height: 34px;
   }
 
