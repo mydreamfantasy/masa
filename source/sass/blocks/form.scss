@@ -189,10 +189,17 @@
 }
 
 .form__textarea textarea {
+  width: 100%;
+  outline: none;
   padding: 16px 25px;
+  min-height: 98px;
   color: $color-default-white;
   font-size: 16px;
   opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid rgba(#ffffff, 0.3);
+  background-color: transparent;
+  overflow: auto;
   order: 2;
 
   &:disabled {
@@ -376,10 +383,6 @@
     background-color: $color-cerulean;
     outline: none;
   }
-}
-
-.form__item[aria-selected="true"] {
-  background-color: $color-default-white;
 }
 
 .form__button-select {

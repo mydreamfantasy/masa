@@ -227,17 +227,6 @@
     }
   }
 
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
-
   &--placeholder {
     .custom-select__label {
       transform: translateY(calc(-50% - 40px));
@@ -273,10 +262,6 @@
     &.is-invalid {
       color: #ff0000;
     }
-
-    &.is-valid {
-      color: #15ab07;
-    }
   }
 }
 
@@ -292,4 +277,10 @@
     font-size: 12px;
     line-height: 14px;
   }
+}
+
+.custom-select__item[aria-selected="true"],
+.custom-select__item[aria-selected="true"]:hover {
+  background-color: rgb(49, 109, 194);
+  color: rgb(255, 255, 255);
 }

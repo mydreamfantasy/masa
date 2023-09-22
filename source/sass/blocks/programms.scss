@@ -83,6 +83,10 @@
 }
 
 .programms__btn span:nth-child(1n) {
+  max-width: 135px;
+  word-wrap: break-word;
+  white-space: break-spaces;
+
   @include vp-1199 {
     font-size: 14px;
     line-height: 14px;
